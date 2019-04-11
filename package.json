@@ -1,0 +1,32 @@
+{
+  "name": "twister-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bin/server.js",
+  "bin": {
+    "twister-api": "server.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --watch bin/ --watch server/ ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pierrotgr1/twister-api.git"
+  },
+  "author": "Pierre Arminjon",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pierrotgr1/twister-api/issues"
+  },
+  "homepage": "https://github.com/pierrotgr1/twister-api#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "helmet": "^3.16.0",
+    "morgan": "^1.9.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.11"
+  }
+}
