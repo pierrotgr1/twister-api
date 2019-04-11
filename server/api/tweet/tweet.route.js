@@ -1,13 +1,16 @@
 'use strict';
 
 const Router = require('express').Router();
+const Tweet = require('./tweet.model');
 
-Router.get('/', (req, res, next) => {
-  res.json({Hello: 'World'});
+Router.get('/', async (req, res, next) => {
+  let tweets = await Tweet.find();
+  res.json(tweets);
 })
 
-Router.post('/', (req, res, next) => {
-  res.json({Hello: 'World'});
+Router.post('/', async (req, res, next) => {
+  let tweet = await Tweet.create(req.body);
+  res.json(tweet);
 })
 
 Router.get('/:id', (req, res, next) => {
