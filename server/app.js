@@ -13,6 +13,7 @@ let app = Express();
 /* ---------- ROUTES ---------- */
 
 const TweetRoute = require('./api/tweet/tweet.route');
+const UserRoute = require('./api/user/user.route');
 
 /* ---------- CONFIGURATIONS ---------- */
 
@@ -24,13 +25,14 @@ app.use(BodyParser.urlencoded({ extended: true }));
 app.use(BodyParser.json());
 
 app.use('/api/tweets', TweetRoute);
+app.use('/api/users', UserRoute);
 app.use('/', (req, res) => res.send('Twister API'));
 
 
 /* ---------- START ---------- */
 
 app.start = (port) => {
-  app.listen(port, () => console.log('Listen @ 3000'));
+  app.listen(port, () => console.log('Listen @ ' + 3000));
 }
 
 /* ---------- MODULE EXPORTS ---------- */
